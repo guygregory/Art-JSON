@@ -1,6 +1,8 @@
 # Azure OpenAI GPT-4o Structured Outputs Demo
 
-[![Watch the demo video](https://img.youtube.com/vi/hjItbqEOO-4/0.jpg)](https://www.youtube.com/watch?v=hjItbqEOO-4)
+[![Watch the demo video](./video/StructuredOutputsThumbnail.png)](./video/StructuredOutputs.mp4)
+
+[![Watch the demo video](./video/StructuredOutputsThumbnail.png)](https://www.youtube.com/watch?v=hjItbqEOO-4)
 
 *Click the image above to watch the demo video.*
 
