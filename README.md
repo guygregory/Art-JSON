@@ -1,4 +1,4 @@
-# Azure OpenAI GPT-4o Structured Output Demo
+# Azure OpenAI GPT-4o Structured Outputs Demo
 
 [![Watch the demo video](https://img.youtube.com/vi/hjItbqEOO-4/0.jpg)](https://www.youtube.com/watch?v=hjItbqEOO-4)
 
@@ -6,13 +6,13 @@
 
 ## Overview
 
-This sample application demonstrates the **Structured Output** capabilities of GPT-4o (version 2024-08-06) within the Azure OpenAI Service. By leveraging the multi-modal features of GPT-4o, the app allows users to upload an image of a painting or artwork and extracts key information in a structured JSON format that strictly adheres to a provided JSON schema.
+This sample application demonstrates the **Structured Outputs** capabilities of GPT-4o (version 2024-08-06) within the Azure OpenAI Service. By leveraging the multi-modal features of GPT-4o, the app allows users to upload an image of a painting or artwork and extracts key information in a structured JSON format that strictly adheres to a provided JSON schema.
 
 ## Features
 
 - **Image Upload**: Users can upload an image of a painting or artwork.
 - **Image Preview**: Displays a preview of the selected image before processing.
-- **Structured Data Extraction**: Utilizes GPT-4o's Structured Output feature to extract information such as title, artist, year, description, and art style.
+- **Structured Data Extraction**: Utilizes GPT-4o's Structured Outputs feature to extract information such as title, artist, year, description, and art style.
 - **Schema Compliance**: Ensures the JSON output strictly adheres to the predefined schema.
 - **Toggle View**: Allows users to switch between a formatted display and the raw JSON output.
 - **Simple UI**: A simple and modern Flask interface styled with CSS and utilizing system fonts.
