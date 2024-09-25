@@ -24,12 +24,7 @@ This sample application demonstrates the **Structured Outputs** capabilities of 
 
 ## Installation
 
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
-   ```
+1. **Clone/download this Repository**
 
 2. **Install Required Packages**
 
