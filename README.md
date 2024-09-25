@@ -1,4 +1,4 @@
-# Art Recognition App with GPT-4o Structured Output
+# Azure OpenAI GPT-4o Structured Output Demo
 
 [![Watch the demo video](https://img.youtube.com/vi/hjItbqEOO-4/0.jpg)](https://www.youtube.com/watch?v=hjItbqEOO-4)
 
