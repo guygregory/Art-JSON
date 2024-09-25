@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Painting Information</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            color: #333;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 400px;
+            border: 1px solid #ddd;
+        }
+        .info, .json-output {
+            margin-top: 20px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .info p {
+            font-size: 18px;
+            line-height: 1.5;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .info strong {
+            color: #555;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #4285F4;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .toggle-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            cursor: pointer;
+            background-color: #4285F4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+        }
+        .toggle-button:hover {
+            background-color: #357AE8;
+        }
+        .json-content {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            font-size: 18px;
+            line-height: 1.5;
+            white-space: pre-wrap; /* Preserve formatting and allow wrapping */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word; /* Break long words if necessary */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+    </style>
+    <script>
+        function toggleView() {
+            var formattedOutput = document.getElementById('formatted-output');
+            var jsonOutput = document.getElementById('json-output');
+            var toggleButton = document.getElementById('toggle-button');
+
+            if (formattedOutput.style.display === 'none') {
+                formattedOutput.style.display = 'block';
+                jsonOutput.style.display = 'none';
+                toggleButton.textContent = 'View JSON';
+            } else {
+                formattedOutput.style.display = 'none';
+                jsonOutput.style.display = 'block';
+                toggleButton.textContent = 'View Formatted';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Extracted Information</h1>
+    <div class="image-container">
+        <img src="data:image/png;base64,{{ image_data }}" alt="Uploaded Image">
+    </div>
+
+    <div style="text-align: center;">
+        <button id="toggle-button" class="toggle-button" onclick="toggleView()">View JSON</button>
+    </div>
+
+    <div id="formatted-output" class="info">
+        <p><strong>Title:</strong> {{ result.title }}</p>
+        <p><strong>Artist:</strong> {{ result.artist }}</p>
+        <p><strong>Year:</strong> {{ result.year }}</p>
+        <p><strong>Description:</strong> {{ result.short_description }}</p>
+        <p><strong>Art Style:</strong> {{ result.art_style }}</p>
+    </div>
+
+    <div id="json-output" class="json-output" style="display: none;">
+        <div class="json-content">{{ result_json }}</div>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="/">Upload Another Image</a>
+    </div>
+</body>
+</html>

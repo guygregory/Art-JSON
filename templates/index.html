@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Artwork</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            color: #444;
+        }
+        .preview {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #image-preview {
+            max-width: 100%;
+            max-height: 300px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            display: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Hide the actual file input */
+        input[type="file"] {
+            display: none;
+        }
+        /* Style the label as a button */
+        .file-label, input[type="submit"] {
+            background-color: #4285F4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block;
+            margin: 10px auto;
+        }
+        .file-label:hover, input[type="submit"]:hover {
+            background-color: #357AE8;
+        }
+        /* Display the selected file name */
+        #file-name {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Artwork</h1>
+    <form action="/process" method="post" enctype="multipart/form-data">
+        <!-- Styled "Choose File" button -->
+        <label for="image" class="file-label">Choose File</label>
+        <input type="file" name="image" id="image" accept="image/*" required onchange="previewImage(event)">
+        <div id="file-name"></div>
+        <div class="preview">
+            <img id="image-preview" src="#" alt="Image Preview">
+        </div>
+        <input type="submit" value="Upload and Process">
+    </form>
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                var output = document.getElementById('image-preview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+
+            // Display the selected file name
+            var fileName = event.target.files[0].name;
+            document.getElementById('file-name').textContent = 'Selected File: ' + fileName;
+        }
+    </script>
+</body>
+</html>
