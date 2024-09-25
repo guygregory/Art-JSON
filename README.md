@@ -126,14 +126,6 @@ This application utilizes the **Structured Output** feature of GPT-4o (2024-08-0
 }
 ```
 
-## Demo Video
-
-For a quick demonstration, watch the [demo video](https://www.youtube.com/watch?v=hjItbqEOO-4).
-
-[![Watch the demo video](https://img.youtube.com/vi/hjItbqEOO-4/0.jpg)](https://www.youtube.com/watch?v=hjItbqEOO-4)
-
-*Click the image above to watch the demo video.*
-
 ## Notes
 
 - **Azure OpenAI Access**: Ensure you have deployed an Azure OpenAI Service instance, along with GPT-4o.
